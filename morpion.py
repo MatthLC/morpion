@@ -167,6 +167,8 @@ def current_player(player,icon):
 	if j == 0:
 		user_choice = input("{} ( {} ), a toi de jouer ! Choisi un chiffre parmi ceux restant ci-dessus : ".format(player,icon))
 
+	if j == 1 and nb_player == "2":
+		user_choice = input("{} ( {} ), a toi de jouer ! Choisi un chiffre parmi ceux restant ci-dessus : ".format(player,icon))
 	#comb_gagnant = "" ou X gagnant ou O gagnant
 	comb_gagnant = warning_winner()
 
@@ -184,6 +186,9 @@ def current_player(player,icon):
 	if j == 1 and comb_gagnant == "" and nb_player == "1" and len(best_solution) > 0 :
 		# L'ordinateur joue la meilleur stratégie
 		user_choice = best_solution[0]
+
+
+
 
 	#mise a jour des matrices
 	matrice[user_choice] = icon
